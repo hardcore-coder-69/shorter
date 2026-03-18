@@ -14,8 +14,9 @@ document.addEventListener("click", async function () {
 
 async function startSequence() {
     await sleep(1000);
-    bgmEl.volume = 0.8;
+    bgmEl.volume = 1;
     voiceoverEl.volume = 1;
+    voiceoverEl.playbackRate = 1;
     bgmEl.play();
     voiceoverEl.play();
     await sequence();
