@@ -50,6 +50,16 @@ async function showImage(data) {
     
 }
 
+async function showVideo(data) {
+    let videoContainerEl = document.createElement("div");
+    videoContainerEl.classList.add('single-video-container');
+    
+    let videoEl = document.createElement('video');
+    videoEl.classList.add("single-video");
+    videoEl.setAttribute('src', data.src);
+    videoContainerEl.appendChild(videoEl);
+}
+
 async function sleep(ms) {
     return new Promise(res => setTimeout(() => res(), ms));
 }
