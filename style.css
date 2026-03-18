@@ -16,11 +16,54 @@ p {
 }
 
 .screen {
-    padding-top: 30px;
+    /* padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 40px;
-    padding-right: 40px;
-    width: 450px;
-    height: calc(100vh - 60px);
+    padding-right: 40px; */
+    width: 500px;
+    height: calc(100vh);
     background: #000;
+    overflow: hidden;
+}
+
+.single-image-container {
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    height: 100vh;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-image {
+    width: 500px;
+    height: auto;
+    opacity: 0;
+    animation: smoothShow .5s forwards;
+}
+
+.hiding-now {
+    animation: smoothHide .5s forwards;
+}
+
+@keyframes smoothShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes smoothHide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
