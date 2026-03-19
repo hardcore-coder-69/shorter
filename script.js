@@ -17,8 +17,9 @@ async function startSequence() {
     bgmEl.volume = 1;
     voiceoverEl.volume = 1;
     voiceoverEl.playbackRate = 1;
-    bgmEl.play();
-    voiceoverEl.play();
+
+    // bgmEl.play();
+    // voiceoverEl.play();
     await sequence();
 }
 
@@ -57,10 +58,32 @@ async function showVideo(data) {
     
     let videoEl = document.createElement('video');
     videoEl.classList.add("single-video");
-    videoEl.setAttribute('autoplay', true);
+    videoEl.autoplay = true;
     videoEl.volume = 0;
+    videoEl.muted = true;
     videoEl.setAttribute('src', data.src);
     videoContainerEl.appendChild(videoEl);
+    videoEl.oncanplay = () => {
+        videoEl.playbackRate = data.playbackRate;
+    };
+
+    setTimeout(function() {
+        videoContainerEl.classList.add("hiding-now");
+        setTimeout(() => {
+            videoContainerEl.remove();
+        }, 500);
+    }, data.stayTime - 500);
+
+    screenEl.appendChild(videoContainerEl);
+    if(data.initialTransform) {
+        videoEl.style.transform = data.initialTransform;
+        await sleep(100);
+    }
+
+    if(data.transition && data.transform) {
+        videoEl.style.transition = data.transition;
+        videoEl.style.transform = data.transform;
+    }
 }
 
 async function sleep(ms) {
