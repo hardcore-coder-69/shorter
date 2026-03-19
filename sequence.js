@@ -62,7 +62,7 @@ async function sequence() {
             src: 'temp/3.jpg',
             stayTime: 5000,
             initialTransform: 'scale(2) translateX(100px)',
-            transform: "scale(2) translateX(-100px)",
+            transform: "scale(3) translateX(-100px)",
             transition: "transform 10s linear",
         });
     }, lapsedTime);
