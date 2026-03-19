@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shorter</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="screen-container">
+        <div class="watermark-container">
+            <div class="tp-top-left">
+                <img src="./assets/space-files-logo.jpg" class="tp-user-image" id="tp-user-image">
+                <div class="tp-name-username-cont">
+                    <div class="tp-name-with-icon">
+                        <div class="tp-name" id="tp-name">The Space Files</div>
+                        <img src="./assets/verified.png" class="tp-verified-icon" id="tp-verified-icon">
+                    </div>
+    
+                    <div class="tp-username" id="tp-username">@TheSpaceFiles.1</div>
+                </div>
+            </div>
+            <div class="caption-container">
+                <div class="caption" id="caption"></div>
+            </div>
+        </div>
         <div class="screen" id="screen"></div>
     </div>
-    
+
     <audio src="assets/Alien Song.mp3" id="bgm"></audio>
     <audio src="temp/mp3.mp3" id="voiceover"></audio>
-    <script src="script.js"></script>
     <script src="sequence.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

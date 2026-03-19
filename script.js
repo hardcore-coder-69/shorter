@@ -1,6 +1,8 @@
 const screenEl = document.getElementById("screen");
 const bgmEl = document.getElementById("bgm");
 const voiceoverEl = document.getElementById("voiceover");
+const captionEl = document.getElementById("caption");
+captionEl.innerHTML = caption;
 
 bgmEl.load();
 voiceoverEl.load();
@@ -79,6 +81,7 @@ async function showVideo(data) {
         videoEl.style.transform = data.transform;
     }
 }
+
 
 async function sleep(ms) {
     return new Promise(res => setTimeout(() => res(), ms));

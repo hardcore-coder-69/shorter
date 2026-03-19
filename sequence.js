@@ -1,7 +1,7 @@
+let caption = "One day on mercury is longer than a year on mercury";
 async function sequence() {
     let lapsedTime = 0;
-    
-    setTimeout(function() {
+    setTimeout(function () {
         showImage({
             src: 'temp/2.jpg',
             stayTime: 5000,
@@ -24,7 +24,7 @@ async function sequence() {
     // }, lapsedTime);
     // lapsedTime += 10000;
 
-    setTimeout(function() {
+    setTimeout(function () {
         showImage({
             src: 'temp/3.jpg',
             stayTime: 5000,
@@ -35,7 +35,7 @@ async function sequence() {
     }, lapsedTime);
     lapsedTime += 5000;
 
-    setTimeout(function() {
+    setTimeout(function () {
         showImage({
             src: 'temp/1.jpg',
             stayTime: 5000,
@@ -46,7 +46,7 @@ async function sequence() {
     }, lapsedTime);
     lapsedTime += 5000;
 
-    setTimeout(function() {
+    setTimeout(function () {
         showImage({
             src: 'temp/2.jpg',
             stayTime: 5000,
@@ -57,7 +57,7 @@ async function sequence() {
     }, lapsedTime);
     lapsedTime += 5000;
 
-    setTimeout(function() {
+    setTimeout(function () {
         showImage({
             src: 'temp/3.jpg',
             stayTime: 5000,
