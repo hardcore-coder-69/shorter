@@ -33,11 +33,8 @@ async function showImage(data) {
     imgContainerEl.appendChild(imgEl);
     
     setTimeout(function() {
-        imgContainerEl.classList.add("hiding-now");
-        setTimeout(() => {
-            imgContainerEl.remove();
-        }, 500);
-    }, data.stayTime - 500);
+        imgContainerEl.remove();
+    }, data.stayTime);
 
     screenEl.appendChild(imgContainerEl);
     if(data.initialTransform) {
@@ -68,11 +65,8 @@ async function showVideo(data) {
     };
 
     setTimeout(function() {
-        videoContainerEl.classList.add("hiding-now");
-        setTimeout(() => {
-            videoContainerEl.remove();
-        }, 500);
-    }, data.stayTime - 500);
+        videoContainerEl.remove();
+    }, data.stayTime);
 
     screenEl.appendChild(videoContainerEl);
     if(data.initialTransform) {
