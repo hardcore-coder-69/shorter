@@ -18,8 +18,8 @@ async function startSequence() {
     voiceoverEl.volume = 1;
     voiceoverEl.playbackRate = 1;
 
-    // bgmEl.play();
-    // voiceoverEl.play();
+    bgmEl.play();
+    voiceoverEl.play();
     await sequence();
 }
 
