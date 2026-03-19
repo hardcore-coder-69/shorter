@@ -56,6 +56,7 @@ async function showVideo(data) {
     videoContainerEl.classList.add('single-video-container');
     
     let videoEl = document.createElement('video');
+    videoEl.setAttribute('autoplay', true);
     videoEl.classList.add("single-video");
     videoEl.setAttribute('src', data.src);
     videoContainerEl.appendChild(videoEl);
