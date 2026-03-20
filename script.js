@@ -2,6 +2,7 @@ const screenEl = document.getElementById("screen");
 const bgmEl = document.getElementById("bgm");
 const voiceoverEl = document.getElementById("voiceover");
 const captionEl = document.getElementById("caption");
+captionEl.style.fontSize = `${captionSize}px`;
 captionEl.innerHTML = caption;
 
 bgmEl.load();

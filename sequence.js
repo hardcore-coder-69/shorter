@@ -1,4 +1,5 @@
-let caption = "One day on mercury is longer than a year on mercury";
+let caption = "If something crosses event horizon, it can never come back.";
+let captionSize = 19;
 async function sequence() {
     let lapsedTime = 0;
     setTimeout(function () {
