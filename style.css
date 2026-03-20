@@ -20,7 +20,7 @@ p {
     padding-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px; */
-    width: 400px;
+    width: 410px;
     height: calc(100vh);
     background: #000;
     overflow: hidden;
@@ -31,14 +31,14 @@ p {
     /* top: 0;
     left: 0; */
     height: 100vh;
-    width: 400px;
+    width: 410px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .single-image {
-    width: 400px;
+    width: 410px;
     height: auto;
     /* opacity: 0;
     animation: smoothShow .5s forwards; */
@@ -46,14 +46,14 @@ p {
 
 .single-video-container {
     height: 100vh;
-    width: 400px;
+    width: 410px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .single-video {
-    width: 400px;
+    width: 410px;
     height: auto;
     /* opacity: 0;
     animation: smoothShow .5s forwards; */
@@ -92,7 +92,7 @@ p {
     z-index: 1;
     padding-left: 60px;
     padding-top: 10px;
-    width: calc(400px - 60px);
+    width: calc(410px - 60px);
 }
 
 .tp-user-image {
@@ -136,7 +136,7 @@ p {
     top: 70px;
     font-size: 20px;
     font-weight: 500;
-    width: calc(400px - 120px);
+    width: calc(410px - 120px);
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 10px;

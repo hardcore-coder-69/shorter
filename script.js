@@ -1,12 +1,20 @@
 const screenEl = document.getElementById("screen");
 const bgmEl = document.getElementById("bgm");
 const voiceoverEl = document.getElementById("voiceover");
+const whooshEl = document.getElementById("whoosh-sfx");
+const transitionEl = document.getElementById("transition-whoosh");
+const pageFlipEl = document.getElementById("page-flip");
+const fastWhooshEl = document.getElementById("fast-whoosh");
 const captionEl = document.getElementById("caption");
 captionEl.style.fontSize = `${captionSize}px`;
 captionEl.innerHTML = caption;
 
 bgmEl.load();
 voiceoverEl.load();
+whooshEl.load();
+transitionEl.load();
+pageFlipEl.load();
+fastWhooshEl.load();
 
 let running = false;
 document.addEventListener("click", async function () {
@@ -36,8 +44,13 @@ async function showImage(data) {
     imgContainerEl.appendChild(imgEl);
     
     setTimeout(function() {
-        imgContainerEl.remove();
-    }, data.stayTime);
+        if(data.exitSound) {
+            data.exitSound.play();
+        }
+        setTimeout(function() {
+            imgContainerEl.remove();
+        }, 200);
+    }, data.stayTime - 200);
 
     screenEl.appendChild(imgContainerEl);
     if(data.initialTransform) {
@@ -68,8 +81,13 @@ async function showVideo(data) {
     };
 
     setTimeout(function() {
-        videoContainerEl.remove();
-    }, data.stayTime);
+        if(data.exitSound) {
+            data.exitSound.play();
+        }
+        setTimeout(function() {
+            videoContainerEl.remove();
+        }, 200);
+    }, data.stayTime - 200);
 
     screenEl.appendChild(videoContainerEl);
     if(data.initialTransform) {
