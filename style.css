@@ -83,6 +83,10 @@ p {
     }
 }
 
+.watermark-container {
+    display: none;
+}
+
 .tp-top-left {
     background-color: #000;
     position: absolute;
