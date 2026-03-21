@@ -28,6 +28,7 @@ async function startSequence() {
     bgmEl.volume = 1;
     voiceoverEl.volume = 1;
     voiceoverEl.playbackRate = 1;
+    voiceoverEl.currentTime = 6;
 
     bgmEl.play();
     voiceoverEl.play();
