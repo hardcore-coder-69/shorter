@@ -1,77 +1,77 @@
-let caption = "If something crosses event horizon, it can never come back.";
-let captionSize = 19;
+let caption = "We might be living inside a simulation...";
+let captionSize = 25;
 async function sequence() {
-    let lapsedTime = 0;
+    // voiceoverEl.currentTime = 9;
     setTimeout(function () {
         showImage({
             src: 'temp/1.png',
-            stayTime: 3000,
-            exitSound: whooshEl,
-            initialTransform: 'scale(1.2)',
-            transform: "scale(1)",
+            stayTime: 4000,
+            exitSound: glitchEl,
+            initialTransform: 'scale(1.5)',
+            transform: "scale(1.3)",
             transition: "transform 5s linear",
         });
-    }, lapsedTime);
-    lapsedTime += 3000;
+    }, 0);
 
     setTimeout(function () {
         showImage({
             src: 'temp/2.png',
-            stayTime: 10000,
-            exitSound: fastWhooshEl,
-            initialTransform: 'scale(0.5)',
-            transform: "scale(1)",
+            stayTime: 5000,
+            exitSound: glitchEl,
+            initialTransform: 'scale(1)',
+            transform: "scale(1.2)",
             transition: "transform 10s linear",
         });
-    }, lapsedTime);
-    lapsedTime += 10000;
+    }, 4000);
 
     setTimeout(function () {
         showImage({
             src: 'temp/3.png',
-            stayTime: 4000,
-            exitSound: whooshEl,
+            stayTime: 13000,
+            exitSound: glitchEl,
             initialTransform: 'scale(1)',
-            transform: "scale(1.1)",
-            transition: "transform 5s linear",
+            transform: "scale(1.5)",
+            transition: "transform 15s linear",
         });
-    }, lapsedTime);
-    lapsedTime += 4000;
+    }, 9000);
 
     setTimeout(function () {
         showImage({
             src: 'temp/4.png',
-            stayTime: 5000,
-            exitSound: fastWhooshEl,
-            initialTransform: 'scale(1)',
-            transform: "scale(1.2)",
-            transition: "transform 7s linear",
-        });
-    }, lapsedTime);
-    lapsedTime += 5000;
-
-    setTimeout(function() {
-        showVideo({
-            src: 'temp/5.mp4',
-            playbackRate: 1,
             stayTime: 9000,
-            exitSound: whooshEl,
-            initialTransform: 'scale(1)',
-            transform: "scale(1.5)",
+            exitSound: glitchEl,
+            initialTransform: 'scale(4)',
+            transform: "scale(1)",
             transition: "transform 10s linear",
         });
-    }, lapsedTime);
-    lapsedTime += 9000;
+    }, 22000);
 
     setTimeout(function () {
         showImage({
-            src: 'temp/6.png',
-            stayTime: 10000,
-            exitSound: fastWhooshEl,
+            src: 'temp/5.png',
+            stayTime: 6000,
+            exitSound: glitchEl,
             initialTransform: 'scale(1)',
-            transform: "scale(1.5)",
-            transition: "transform 10s linear",
+            transform: "scale(1.2)",
+            transition: "transform 8s linear",
         });
-    }, lapsedTime);
-    lapsedTime += 10000;
+    }, 31000);
+
+    setTimeout(function() {
+        voiceoverEl.pause();
+    }, 36000);
+
+    
+
+    // setTimeout(function() {
+    //     showVideo({
+    //         src: 'temp/5.mp4',
+    //         playbackRate: 1,
+    //         stayTime: 6000,
+    //         exitSound: glitchEl,
+    //         initialTransform: 'scale(1)',
+    //         transform: "scale(1.2)",
+    //         transition: "transform 8s linear",
+    //     });
+    // }, 30000);
 }

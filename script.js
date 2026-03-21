@@ -2,6 +2,7 @@ const screenEl = document.getElementById("screen");
 const bgmEl = document.getElementById("bgm");
 const voiceoverEl = document.getElementById("voiceover");
 const whooshEl = document.getElementById("whoosh-sfx");
+const glitchEl = document.getElementById("glitch");
 const transitionEl = document.getElementById("transition-whoosh");
 const pageFlipEl = document.getElementById("page-flip");
 const fastWhooshEl = document.getElementById("fast-whoosh");
@@ -15,6 +16,7 @@ whooshEl.load();
 transitionEl.load();
 pageFlipEl.load();
 fastWhooshEl.load();
+glitchEl.load();
 
 let running = false;
 document.addEventListener("click", async function () {
@@ -25,10 +27,10 @@ document.addEventListener("click", async function () {
 
 async function startSequence() {
     await sleep(1000);
+    // bgmEl.currentTime = 16;
     bgmEl.volume = 1;
     voiceoverEl.volume = 1;
     voiceoverEl.playbackRate = 1;
-    voiceoverEl.currentTime = 6;
 
     bgmEl.play();
     voiceoverEl.play();
@@ -47,6 +49,7 @@ async function showImage(data) {
     setTimeout(function() {
         if(data.exitSound) {
             data.exitSound.play();
+            imgEl.classList.add('hiding-now');
         }
         setTimeout(function() {
             imgContainerEl.remove();
