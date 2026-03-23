@@ -27,11 +27,6 @@ document.addEventListener("click", async function () {
 
 async function startSequence() {
     await sleep(1000);
-    // bgmEl.currentTime = 16;
-    bgmEl.volume = 1;
-    voiceoverEl.volume = 1;
-    voiceoverEl.playbackRate = 1;
-
     bgmEl.play();
     voiceoverEl.play();
     await sequence();
@@ -40,6 +35,9 @@ async function startSequence() {
 async function showImage(data) {
     let imgContainerEl = document.createElement("div");
     imgContainerEl.classList.add('single-image-container');
+    if(data.containerAnimation) {
+        imgContainerEl.style.animation = data.containerAnimation;
+    }
     
     let imgEl = document.createElement('img');
     imgEl.classList.add("single-image");
@@ -87,6 +85,7 @@ async function showVideo(data) {
     setTimeout(function() {
         if(data.exitSound) {
             data.exitSound.play();
+            videoContainerEl.classList.add('hiding-now');
         }
         setTimeout(function() {
             videoContainerEl.remove();

@@ -75,18 +75,24 @@ p {
 
 @keyframes smoothHide {
     from {
-        opacity: 1;
+        /* opacity: 1; */
         filter: brightness(2) contrast(2);
     }
 
     to {
-        opacity: 0;
+        /* opacity: 0; */
     }
 }
 
-/* .single-image-container {
-    animation: shake 0.5s infinite ;
-} */
+@keyframes blink {
+    from {
+        opacity: 0.9;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes shake {
     0% {
