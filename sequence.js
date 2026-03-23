@@ -85,7 +85,7 @@ async function sequence() {
         showVideo({
             src: 'temp/1.mp4',
             playbackRate: 1,
-            stayTime: 5000,
+            stayTime: 6000,
             exitSound: glitchEl,
             initialTransform: 'scale(1.5)',
             transform: "scale(2)",
@@ -105,7 +105,7 @@ async function sequence() {
             transition: "transform 10s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
-    }, 10000);
+    }, 11000);
 
     setTimeout(function() {
         showVideo({
@@ -115,7 +115,7 @@ async function sequence() {
             exitSound: glitchEl,
             initialTransform: 'scale(2) translateX(0px)',
             transform: "scale(3) translateX(0px)",
-            transition: "transform 5s linear",
+            transition: "transform 7s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
     }, 17000);
@@ -124,10 +124,10 @@ async function sequence() {
         showVideo({
             src: 'temp/1.mp4',
             playbackRate: 1,
-            stayTime: 7000,
+            stayTime: 6000,
             exitSound: glitchEl,
             initialTransform: 'scale(2) translateX(70px)',
-            transform: "scale(2) translateX(0px)",
+            transform: "scale(2) translateX(20px)",
             transition: "transform 5s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
@@ -140,11 +140,11 @@ async function sequence() {
             stayTime: 8000,
             exitSound: glitchEl,
             initialTransform: 'scale(1.5) translateX(-70px)',
-            transform: "scale(1.5) translateX(10px)",
+            transform: "scale(1.5) translateX(20px)",
             transition: "transform 10s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
-    }, 30000);
+    }, 29000);
 
     setTimeout(function() {
         showImage({
@@ -156,7 +156,7 @@ async function sequence() {
             transition: "transform 5s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
-    }, 38000);
+    }, 37000);
 
     setTimeout(function() {
         showImage({
@@ -168,5 +168,5 @@ async function sequence() {
             transition: "transform 5s linear",
             containerAnimation: 'blink 0.1s infinite'
         });
-    }, 43000);
+    }, 42000);
 }
