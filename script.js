@@ -70,6 +70,9 @@ async function showImage(data) {
 async function showVideo(data) {
     let videoContainerEl = document.createElement("div");
     videoContainerEl.classList.add('single-video-container');
+    if(data.containerAnimation) {
+        videoContainerEl.style.animation = data.containerAnimation;
+    }
     
     let videoEl = document.createElement('video');
     videoEl.classList.add("single-video");
@@ -85,7 +88,7 @@ async function showVideo(data) {
     setTimeout(function() {
         if(data.exitSound) {
             data.exitSound.play();
-            videoContainerEl.classList.add('hiding-now');
+            videoEl.classList.add('hiding-now');
         }
         setTimeout(function() {
             videoContainerEl.remove();
