@@ -84,6 +84,60 @@ p {
     }
 }
 
+@keyframes blinkAndShakeHorizontal {
+    0% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        opacity: 0.9;
+        transform: translate(.5px, 0px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        opacity: 0.9;
+        transform: translate(-.5px, 0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blinkAndShakeVertical {
+    0% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        opacity: 0.9;
+        transform: translate(0px, .5px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        opacity: 0.9;
+        transform: translate(0px, -.5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
 @keyframes blink {
     from {
         opacity: 0.9;
